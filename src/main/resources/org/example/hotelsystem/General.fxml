@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700" prefWidth="1000" styleClass="root-pane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelsystem.GeneralController" stylesheets="@General.css">
+   <children>
+      <VBox alignment="CENTER" layoutX="150.0" layoutY="50.0" prefHeight="500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <ImageView fitWidth="600.0" preserveRatio="true">
+               <image>
+                  <Image url="@images/Griya-Bougenville.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="welcome-text" text="Selamat Datang!" />
+         </children>
+      </VBox>
+      <Button fx:id="guestButton" mnemonicParsing="false" onAction="#onGuestButtonAction" prefHeight="103.0" prefWidth="179.0" styleClass="action-button" text="I'm Guest!" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="300.0" />
+      <Button fx:id="staffButton" mnemonicParsing="false" onAction="#onStaffButtonAction" prefHeight="103.0" prefWidth="179.0" styleClass="action-button" text="I'm Staff!" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="300.0" />
+   </children>
+</AnchorPane>

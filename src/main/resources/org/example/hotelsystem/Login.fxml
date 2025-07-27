@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="450.0" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelsystem.LoginController">
+   <children>
+      <VBox fx:id="formContainer" alignment="CENTER" layoutY="-0.8" prefHeight="500.0" prefWidth="450.0" spacing="12.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+         <ImageView fitWidth="220.0" preserveRatio="true">
+            <image>
+               <Image url="@images/Griya-Bougenville.png" />
+            </image>
+            <VBox.margin>
+               <Insets top="-40.0" />
+            </VBox.margin>
+         </ImageView>
+         <Text fx:id="titleLogin" layoutX="212.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masuk Sebagai Pegawai" textAlignment="CENTER" wrappingWidth="350">
+            <VBox.margin>
+               <Insets bottom="25.0" />
+            </VBox.margin>
+         </Text>
+         <TextField fx:id="usernameTextField" layoutX="192.0" layoutY="147.0" prefWidth="218.0" promptText="Username" />
+         <PasswordField fx:id="passwordField" layoutX="191.0" layoutY="200.0" prefWidth="218.0" promptText="Password" />
+         <Button fx:id="loginButton" layoutX="191.0" layoutY="288.0" onAction="#onLoginButtonAction" prefHeight="29.0" prefWidth="218.0" text="Login" />
+         <Button fx:id="backButton" layoutX="191.0" layoutY="328.0" mnemonicParsing="false" onAction="#onBackButtonAction" prefHeight="29.0" prefWidth="218.0" text="Kembali" textFill="WHITE" />
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+.root {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-background-color: #efefd7;
+}
+
+#formContainer {
+    -fx-padding: 20 40 20 40;
+    -fx-alignment: center;
+    -fx-spacing: 15px;
+}
+
+#titleLogin {
+    -fx-font-size: 24px;
+    -fx-text-fill: #000000;
+    -fx-padding: 10px;
+    -fx-font-family: "Poppins SemiBold", sans-serif;
+}
+
+#usernameTextField, #passwordField {
+    -fx-pref-height: 40px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #6F7777;
+    -fx-border-width: 1.2px;
+    -fx-background-color: #ffffff;
+    -fx-padding: 0 10 0 10;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-max-width: 300px;
+}
+
+#usernameTextField:focused, #passwordField:focused {
+    -fx-border-color: #333;
+    -fx-border-width: 1.6px;
+}
+
+#loginButton {
+    -fx-background-color: #ffc107;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 2);
+    -fx-max-width: 300px;
+}
+
+#loginButton:hover {
+    -fx-background-color: #ffd633;
+}
+
+#loginButton:pressed {
+    -fx-background-color: #e6b800;
+}
+
+#backButton {
+    -fx-background-color: #cd4439;
+    -fx-text-fill: #eaeaea;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.15), 2, 0, 0, 2);
+    -fx-max-width: 300px;
+}
+
+#backButton:hover {
+    -fx-background-color: #e75c50;
+}
+
+#backButton:pressed {
+    -fx-background-color: #a31b0f;
+}

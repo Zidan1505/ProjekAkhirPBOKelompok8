@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url("fonts/Poppins-Medium.ttf");
+}
+
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom, #efefd7, #eaeaea);
+    -fx-padding: 20px;
+    -fx-font-family: "Poppins", sans-serif;
+}
+
+.label {
+    -fx-text-fill: #1e1e1e;
+    -fx-font-size: 14px;
+    -fx-font-family: "Poppins", sans-serif;
+}
+
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-padding: 6px;
+    -fx-font-size: 13px;
+}
+
+#titleLabel {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e1e1e;
+}
+
+.save-button {
+    -fx-background-color: #ffc107;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-font-family: "Poppins", sans-serif;
+}
+
+.save-button:hover {
+    -fx-background-color: #ffd633;
+}
+
+.save-button:pressed {
+    -fx-background-color: #e6b800;
+}

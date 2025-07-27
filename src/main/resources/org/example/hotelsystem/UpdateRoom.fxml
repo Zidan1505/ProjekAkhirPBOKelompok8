@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="450.0" styleClass="root-pane" stylesheets="@updateRoom.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelsystem.UpdateRoomController">
+
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="25.0" layoutY="25.0" prefWidth="400.0" spacing="15.0">
+         <children>
+            <Label fx:id="titleLabel" text="Tambah Kamar Baru">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <GridPane hgap="10.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints prefWidth="120.0" />
+                  <ColumnConstraints prefWidth="250.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Nomor Kamar" />
+                  <TextField fx:id="idField" prefHeight="25.0" GridPane.columnIndex="1" />
+                  <Label text="Status Kamar" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="statusRoomComboBox" prefHeight="36.0" prefWidth="251.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Status Check" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="checkStatusRoomComboBox" prefHeight="36.0" prefWidth="253.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Harga" GridPane.rowIndex="3" />
+                  <TextField fx:id="priceField" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Fasilitas AC" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="acComboBox" prefHeight="36.0" prefWidth="253.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label text="Fasilitas Single Bed" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="singleBedComboBox" prefHeight="36.0" prefWidth="267.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label text="Fasilitas Twin Bed" GridPane.rowIndex="6" />
+                  <ComboBox fx:id="twinBedComboBox" prefHeight="36.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label text="Fasilitas Double Bed" GridPane.rowIndex="7" />
+                  <ComboBox fx:id="doubleBedComboBox" prefHeight="36.0" prefWidth="256.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+            <Button fx:id="saveButton" onAction="#onSaveButtonAction" prefHeight="30.0" prefWidth="400.0" styleClass="save-button" text="Simpan" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

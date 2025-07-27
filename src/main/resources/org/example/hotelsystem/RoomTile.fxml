@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" styleClass="room-tile" onMouseClicked="#onTileClicked" prefHeight="150.0" prefWidth="200.0" stylesheets="@roomtile.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelsystem.RoomTileController">
+    <children>
+        <VBox alignment="CENTER_LEFT" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <Label text="Kamar No:" fx:id="roomTextLabel" />
+                <Label fx:id="roomNumberLabel" text="101" styleClass="room-number" />
+                <Label fx:id="priceLabel" text="Rp 200,000 / malam" styleClass="room-price" />
+                <Label fx:id="facilityLabel" text="Fasilitas: AC, Single Bed" wrapText="true" styleClass="room-facility" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

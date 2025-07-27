@@ -1,0 +1,53 @@
+.root {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-background-color: #efefd7;
+}
+
+@font-face {
+    font-family: 'Poppins_Medium';
+    src: url("fonts/Poppins-Medium.ttf");
+}
+
+.room-tile {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 12px;
+    -fx-padding: 12;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 8, 0.1, 0, 2);
+}
+
+.room-tile:hover {
+    -fx-background-color: #efefd7;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 12, 0.2, 0, 2);
+}
+
+.room-tile:pressed {
+    -fx-background-color: #ebebc0;
+}
+
+.selected-room {
+    -fx-background-color: #ebebc0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 12, 0.2, 0, 2);
+}
+
+.room-number {
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.room-price {
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+    -fx-text-fill: #333333;
+}
+
+.room-facility {
+    -fx-font-size: 13px;
+    -fx-text-fill: #333333;
+}
+
+.room-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" stylesheets="@administrator.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelsystem.AdministratorController">
+    <children>
+        <VBox alignment="CENTER" spacing="0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                <tabs>
+                    <Tab fx:id="employeeTabPane" styleClass="nav-menu" text="Employee">
+                        <content>
+                            <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <children>
+                                    <TextField fx:id="searchEmployeeField" prefHeight="30.0" promptText="Cari berdasarkan Nama atau Username" styleClass="search-field" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                    <TableView fx:id="employeeTable" prefHeight="200.0" styleClass="table-view" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+                                        <columns>
+                                            <TableColumn fx:id="fullnameColumn" text="Nama Lengkap" />
+                                            <TableColumn fx:id="statusEmployeeColumn" text="Status Login" />
+                                        </columns>
+                                    </TableView>
+                                    <TableView fx:id="detailTable" prefHeight="120.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="260.0">
+                                        <columns>
+                                            <TableColumn fx:id="idColumn" text="ID" prefWidth="100.0" />
+                                            <TableColumn fx:id="usernameColumn" text="Username" prefWidth="200.0" />
+                                            <TableColumn fx:id="emailColumn" text="Email" prefWidth="250.0" />
+                                            <TableColumn fx:id="contactColumn" text="Kontak" prefWidth="200.0" />
+                                        </columns>
+                                    </TableView>
+                                    <HBox prefHeight="35.0" prefWidth="979.0" spacing="10.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="11.0">
+                                        <children>
+                                            <Button fx:id="addEmployeeButton" maxWidth="Infinity" onAction="#onAddEmployeeButton" prefHeight="35.0" prefWidth="320.0" styleClass="success-button" text="Tambah Employee" textFill="WHITE">
+                                                <font>
+                                                    <Font name="System Bold" size="14.0" />
+                                                </font>
+                                            </Button>
+                                            <Button fx:id="editEmployeeButton" maxWidth="Infinity" onAction="#onEditEmployeeButton" prefHeight="35.0" prefWidth="320.0" styleClass="success-button" text="Edit Employee" textFill="WHITE" />
+                                            <Button fx:id="deleteEmployeeButton" maxWidth="Infinity" onAction="#onDeleteEmployeeButton" prefHeight="35.0" prefWidth="320.0" styleClass="success-button" text="Hapus Employee" textFill="WHITE" />
+                                        </children>
+                                    </HBox>
+                                    <Button fx:id="forceLogoutButton" onAction="#onForceLogoutButtonAction" prefHeight="35.0" styleClass="danger-button" text="Logout" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                                </children>
+                            </AnchorPane>
+                        </content>
+                    </Tab>
+                    <Tab fx:id="roomTabPane" styleClass="nav-menu" text="Room">
+                        <content>
+                            <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <children>
+                                    <TextField fx:id="searchRoomField" prefHeight="30.0" promptText="Cari berdasarkan Nomor Kamar" styleClass="search-field" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                    <TableView fx:id="roomTable" prefHeight="300.0" styleClass="table-view" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+                                        <columns>
+                                            <TableColumn fx:id="roomNumberColumn" text="No. Kamar" />
+                                            <TableColumn fx:id="statusRoomColumn" text="Status" />
+                                            <TableColumn fx:id="checkStatusColumn" text="Status Check" />
+                                            <TableColumn fx:id="priceColumn" text="Harga" />
+                                            <TableColumn fx:id="acColumn" text="AC" />
+                                            <TableColumn fx:id="singleBedColumn" text="Single" />
+                                            <TableColumn fx:id="twinBedColumn" text="Twin" />
+                                            <TableColumn fx:id="doubleBedColumn" text="Double" />
+                                        </columns>
+                                    </TableView>
+                                    <VBox spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                        <children>
+                                            <Button fx:id="editRoomButton" onAction="#onEditRoomButtonAction" prefHeight="35.0" prefWidth="979.0" styleClass="success-button" text="Edit Kamar Terpilih" />
+                                            <Button fx:id="addRoomButton" onAction="#onAddRoomButtonAction" prefHeight="35.0" prefWidth="979.0" styleClass="success-button" text="Tambah Kamar Baru" textFill="WHITE" />
+                                            <Button fx:id="deleteRoomButton" onAction="#onDeleteRoomButtonAction" prefHeight="35.0" prefWidth="979.0" styleClass="danger-button" text="Hapus Kamar Baru" textFill="WHITE" />
+                                        </children>
+                                    </VBox>
+                                </children>
+                            </AnchorPane>
+                        </content>
+                    </Tab>
+                    <Tab fx:id="ReservationTabPane" styleClass="nav-menu" text="Reservation">
+                        <content>
+                            <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <children>
+                                    <TextField fx:id="searchReservationField" prefHeight="30.0" promptText="Cari berdasarkan Nama Tamu atau Nomor Kamar" styleClass="search-field" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                    <TableView fx:id="reservationTable" prefHeight="350.0" styleClass="table-view" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+                                        <columns>
+                                            <TableColumn fx:id="roomNumberColumn1" text="Id Reservation" />
+                                            <TableColumn fx:id="statusRoomColumn1" text="Id Resepsionis" />
+                                            <TableColumn fx:id="checkStatusColumn1" text="Nomor Kamar" />
+                                            <TableColumn fx:id="priceColumn1" text="Nama Tamu" />
+                                            <TableColumn fx:id="acColumn1" text="Tanggal Reservasi" />
+                                            <TableColumn fx:id="singleBedColumn1" text="Tanggal Check In" />
+                                            <TableColumn fx:id="twinBedColumn1" text="Tanggal Check Out" />
+                                            <TableColumn fx:id="doubleBedColumn1" text="Status Reservasi" />
+                                        </columns>
+                                    </TableView>
+                                    <VBox spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                        <children>
+                                            <Button fx:id="editReservationButton" onAction="#onEditReservationButton" prefHeight="35.0" prefWidth="979.0" styleClass="success-button" text="Edit Reservasi Terpilih" />
+                                            <Button fx:id="deleteReservationButton" onAction="#onDeleteReservationButton" prefHeight="35.0" prefWidth="979.0" styleClass="danger-button" text="Hapus Reservasi Baru" textFill="WHITE" />
+                                        </children>
+                                    </VBox>
+                                </children>
+                            </AnchorPane>
+                        </content>
+                    </Tab>
+                    <Tab fx:id="housekeepingTabPane" styleClass="nav-menu" text="HousekeepingRecord">
+                        <content>
+                            <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <children>
+                                    <TextField fx:id="searchHousekeepingField" prefHeight="30.0" promptText="Cari berdasarkan Nomor Kamar" styleClass="search-field" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                                    <TableView fx:id="housekeepingRecordTable" prefHeight="350.0" styleClass="table-view" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+                                        <columns>
+                                            <TableColumn fx:id="idRecordColumn" text="Id Record" />
+                                            <TableColumn fx:id="housekeepingIdColumn" text="Housekeeping Id" />
+                                            <TableColumn fx:id="roomNumberHkColumn" text="Nomor Kamar" />
+                                            <TableColumn fx:id="recordDateColumn" text="Tanggal Record" />
+                                            <TableColumn fx:id="descriptionColumn" text="Keterangan" />
+                                        </columns>
+                                    </TableView>
+                                    <VBox spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                        <children>
+                                            <Button fx:id="editHousekeepingButton1" mnemonicParsing="false" onAction="#onEditHousekeepingButton" prefHeight="35.0" prefWidth="979.0" styleClass="success-button" text="Tambah Record" />
+                                            <Button fx:id="editHousekeepingRecordButton" mnemonicParsing="false" onAction="#onEditHousekeepingRecordButton" prefHeight="35.0" prefWidth="979.0" styleClass="success-button" text="Edit Record" />
+                                            <Button fx:id="deleteHousekeepingButton11" mnemonicParsing="false" onAction="#onDeleteHousekeepingButton" prefHeight="35.0" prefWidth="979.0" styleClass="danger-button" text="Hapus Record" />
+                                        </children>
+                                    </VBox>
+                                </children>
+                            </AnchorPane>
+                        </content>
+                    </Tab>
+                </tabs>
+            </TabPane>
+        </VBox>
+    </children>
+</AnchorPane>

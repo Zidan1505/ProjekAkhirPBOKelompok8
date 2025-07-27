@@ -1,0 +1,78 @@
+.root-pane {
+    -fx-background-color: #efefd7;
+    -fx-font-family: "Poppins", sans-serif;
+}
+
+.form-text {
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e1e1e;
+    -fx-font-family: "Poppins";
+}
+
+.room-label {
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e1e1e;
+    -fx-font-family: "Poppins", sans-serif;
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #1e1e1e;
+    -fx-font-family: "Poppins-SemiBold";
+}
+
+.action-button {
+    -fx-background-color: #ffc107;
+    -fx-text-fill: #1e1e1e;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-padding: 10px 10px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 0, 2, 2);
+    -fx-border-color: transparent;
+}
+
+.action-button:hover {
+    -fx-background-color: #ffd633;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.action-button:pressed {
+    -fx-background-color: #e6b800;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.download-button {
+    -fx-background-color: #58a662;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+}
+
+.download-button:hover {
+    -fx-background-color: #2f6e4d;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.readonly-field {
+    -fx-background-color: white;
+    -fx-opacity: 0.9;
+}
+
+.combo-box {
+    -fx-background-color: #cccccc;
+}
+
+.date-picker {
+    -fx-background-color: #fff8dc;
+}

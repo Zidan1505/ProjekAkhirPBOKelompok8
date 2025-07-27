@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="583.0" prefWidth="400.0" stylesheets="@updateReservation.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotelsystem.UpdateReservationController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="2.0" layoutY="14.0" prefHeight="583.0" prefWidth="397.0" spacing="10.0" styleClass="reservation-form" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+            <children>
+                <Label fx:id="titleLabel" styleClass="form-title" text="Kelola Reservasi" />
+
+                <Label styleClass="label" text="ID Reservasi (Otomatis)" />
+                <TextField fx:id="reservationIdField" disable="true" promptText="ID akan dibuat otomatis" styleClass="text-field" />
+
+                <Label styleClass="label" text="Nama Tamu" />
+                <TextField fx:id="guestNameField" prefHeight="28.0" prefWidth="343.0" promptText="Masukkan nama tamu..." styleClass="text-field" />
+
+                <Label styleClass="label" text="Kontak Tamu" />
+                <TextField fx:id="guestContactField" promptText="Masukkan kontak tamu..." styleClass="text-field" />
+
+                <Label styleClass="label" text="Nomor Kamar" />
+                <ComboBox fx:id="roomNumberComboBox" promptText="Pilih nomor kamar" styleClass="combo-box" />
+
+                <Label styleClass="label" text="Tanggal Check-In" />
+                <DatePicker fx:id="checkInPicker" styleClass="date-picker" />
+
+                <Label styleClass="label" text="Tanggal Check-Out" />
+                <DatePicker fx:id="checkOutPicker" styleClass="date-picker" />
+
+                <Label styleClass="label" text="Status Reservasi" />
+                <ComboBox fx:id="statusComboBox" promptText="Pilih status" styleClass="combo-box" />
+
+                <Button fx:id="saveButton" onAction="#onSaveButtonAction" prefHeight="35.0" prefWidth="370.0" styleClass="save-button" text="Simpan">
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
