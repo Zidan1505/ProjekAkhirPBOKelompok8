@@ -37,11 +37,11 @@ Komponen Controller berfungsi sebagai perantara antara Model dan View.
 
 ---
 
-### Skema Database
+## Skema Database
 
 Skema database untuk Sistem Informasi Hotel ini dirancang menggunakan PostgreSQL dan terdiri dari lima tabel utama serta tiga objek sequence pendukung yang saling berhubungan untuk mengelola data operasional hotel. Kelima tabel tersebut adalah employee, room, reservation, housekeeping_record, dan app_counters. Hubungan antar tabel diatur menggunakan foreign key constraint untuk memastikan integritas dan konsistensi data.
 
-#### **a. Tabel employee**
+### **a. Tabel employee**
 
 Tabel ini berfungsi sebagai pusat data untuk semua karyawan hotel yang memiliki akses ke sistem.
 
@@ -58,7 +58,7 @@ Tabel ini berfungsi sebagai pusat data untuk semua karyawan hotel yang memiliki 
 | contact | VARCHAR(30) | NOT NULL, UNIQUE | Nomor kontak unik karyawan. |
 | status_employee| VARCHAR(20) | NOT NULL, CHECK | Status login saat ini (Logged-In atau Logged-Out). |
 
-#### **b. Tabel room**
+### **b. Tabel room**
 
 Tabel ini adalah data master untuk semua kamar yang dimiliki oleh hotel.
 
@@ -75,7 +75,7 @@ Tabel ini adalah data master untuk semua kamar yang dimiliki oleh hotel.
 | last_modified_date | DATE | - | Tanggal terakhir data kamar ini diubah. |
 | check_status | VARCHAR(30) | NOT NULL, CHECK | Status siklus hunian (Waiting for Check-In, Check-In, dll.). |
 
-#### **c. Tabel reservation**
+### **c. Tabel reservation**
 
 Tabel ini mencatat semua transaksi pemesanan kamar.
 
@@ -94,7 +94,7 @@ Tabel ini mencatat semua transaksi pemesanan kamar.
 | check_out_date| DATE | NOT NULL | Tanggal selesai menginap. |
 | reservation_status|VARCHAR(30)| NOT NULL, DEFAULT 'CONFIRMED' | Status siklus reservasi (CONFIRMED, CHECKED_IN, COMPLETED). |
 
-#### **d. Tabel housekeeping_record**
+### **d. Tabel housekeeping_record**
 
 Tabel ini digunakan oleh petugas kebersihan untuk mencatat aktivitas mereka.
 
@@ -109,7 +109,7 @@ Tabel ini digunakan oleh petugas kebersihan untuk mencatat aktivitas mereka.
 | record_date | DATE | NOT NULL | Tanggal saat catatan dibuat. |
 | notes | VARCHAR(500) | - | Isi catatan atau laporan dari petugas. |
 
-#### **e. Tabel app_counters**
+### **e. Tabel app_counters**
 
 Tabel utilitas untuk menyimpan nilai penghitung yang digunakan oleh aplikasi.
 
@@ -121,7 +121,7 @@ Tabel utilitas untuk menyimpan nilai penghitung yang digunakan oleh aplikasi.
 | counter_name | VARCHAR(50) | PRIMARY KEY | Nama unik dari penghitung. |
 | current_value| INTEGER | NOT NULL | Nilai terakhir dari penghitung. |
 
-#### **f. Objek Sequence**
+### **f. Objek Sequence**
 Skema ini juga memanfaatkan tiga objek sequence yang dibuat secara otomatis oleh PostgreSQL untuk kolom IDENTITY. Sequence adalah objek khusus yang menghasilkan urutan angka unik.
 
 * **public.employee_id_seq**: Terhubung ke kolom id di tabel employee.
@@ -137,3 +137,15 @@ Penggunaan sequence ini mengotomatiskan proses pembuatan ID, mengurangi risiko k
 * **`pom.xml`**: Merupakan berkas *Project Object Model* (POM) untuk Maven. Berkas ini mendefinisikan konfigurasi proyek, dependensi eksternal, dan *plugin* yang diperlukan untuk proses kompilasi dan pengemasan.
 * **`mvnw` & `.mvn/wrapper`**: Komponen **Maven Wrapper**. Ini adalah skrip yang memungkinkan proyek untuk dibangun menggunakan versi Maven yang telah ditentukan tanpa memerlukan instalasi Maven secara manual di lingkungan lokal. Hal ini menjamin konsistensi proses *build* di berbagai mesin pengembangan.
 * **`.gitignore`**: Berkas konfigurasi untuk Git yang secara eksplisit mendefinisikan file dan direktori yang harus diabaikan dari *version control*. Ini penting untuk menjaga kebersihan repositori dengan mengecualikan file yang dihasilkan oleh IDE atau proses *build*.
+
+---
+
+## Tim Pengembang (TIM 8/2KS3)
+
+| Nama | NIM |
+| :--- | :--- |
+| Annisa Raihana Mudzakir | 222312986 |
+| Arif Budiman | 222312994 |
+| Haykal Pasha Siregar | 222313117 |
+| Naufal Dzaki Zaidan | 222313290 |
+| Rezky Amaliah | 222313344 |
